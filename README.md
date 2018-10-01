@@ -27,7 +27,7 @@ public class NumberWizard : MonoBehaviour {
         max = max + 1;
     }
 	
-	// Update is called once per frame
+	
 	void Update () {
         //detect when some arrow press down and been release
         if (Input.GetKeyDown(KeyCode.UpArrow))
