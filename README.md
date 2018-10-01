@@ -16,14 +16,13 @@ using TMPro;
     
     void StartGame()
     {
-        guess = (max + min) / 2;
-        GuessText.text = guess.ToString(); 
-        max = max + 1;
+        max = max + 1; //make sure 1000 is a guessable
+        NextGuess();
     }
 	
     public void PressHigh()
     {
-        min = guess;
+        min = guess + 1; //make sure it will not guess an already guess number
         NextGuess();
     }
     public void PressLow()
@@ -35,7 +34,7 @@ using TMPro;
 	
     void NextGuess()
     {
-        guess = (max + min) / 2;
+        guess = Random.Range(min, max); //make the guess become random
         GuessText.text = guess.ToString();
     }
 }
