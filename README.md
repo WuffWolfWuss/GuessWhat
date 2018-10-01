@@ -16,12 +16,12 @@ using TMPro;
     
     void StartGame()
     {
-        max = max + 1; //make sure 1000 is a guessable
         NextGuess();
     }
 	
     public void PressHigh()
     {
+    	if (mix < max)
         min = guess + 1; //make sure it will not guess an already guess number
         NextGuess();
     }
